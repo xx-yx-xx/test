@@ -1,0 +1,49 @@
+##############Ubuntu:git insrall############
+
+$apt-get install git
+
+
+$git --version
+
+#############git-config##############
+
+$git config --global user.name "roottest"
+$git config --global user.email test@roottest.com
+
+$git config --list
+
+#############git init#################
+$git init
+
+$git add test.txt
+$git commit -m 'XXXX版本'
+
+$git status
+#查看提交后是否有对文件进行再次修改。
+
+$git diff test.txt
+#比较文件的不同，即比较文件在暂存区和工作区的差异。
+#尚未缓存的改动：git diff
+#查看已缓存的改动：git diff --cached
+#查看已缓存的与未缓存的所有改动：git diff HEAD
+#查看摘要而非整个diff：git diff --stat
+
+$git reset
+#用于回退版本，可以指定退回某一次提交的版本。
+#git reset HEAD^	回退所有内容到上一次版本
+#git reset HEAD^ text.txt	回退text.txt文件的版本到上一个版本
+#git reset 052e		回退到指定版本
+
+$git rm test.txt
+#删除工作区文件
+
+$git mv test.txt XXXX
+#移动或重命名文件
+
+$git log
+#查看提交历史记录
+
+$git blame test.txt
+#以列表形式查看指定文件的历史修改记录
+
+
